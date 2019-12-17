@@ -1,6 +1,5 @@
 package com.algorithm.simple;
 
-;
 
 /**
  * @Title: 整数反转

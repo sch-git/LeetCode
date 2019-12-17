@@ -1,6 +1,5 @@
 package com.algorithm.simple;
 
-;
 
 /**
  * @Title: 最大子序和

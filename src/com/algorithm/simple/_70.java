@@ -1,6 +1,5 @@
 package com.algorithm.simple;
 
-;
 
 /**
  * @Title: 爬楼梯

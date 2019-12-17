@@ -2,7 +2,6 @@ package com.algorithm.simple;
 
 import java.util.Stack;
 
-;
 
 /**
  * @Title: 回文数
