@@ -14,7 +14,10 @@ public class _19 {
         ListNode listNode4 = new ListNode(4);
         ListNode listNode5 = new ListNode(5);
         listNode1.next = listNode2;
-        ListNode test = removeNthFromEnd(listNode1, 2);
+        listNode2.next = listNode3;
+        listNode3.next = listNode4;
+        listNode4.next = listNode5;
+        ListNode test = removeNthFromEnd(listNode1, 1);
         while (test != null) {
             System.out.println(test.val);
             test = test.next;
