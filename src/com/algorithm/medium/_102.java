@@ -40,14 +40,16 @@ public class _102 {
         }
         return result;
     }
-}
 
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
+    class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
 
-    TreeNode(int val) {
-        this.val = val;
+        TreeNode(int val) {
+            this.val = val;
+        }
     }
 }
+
+
