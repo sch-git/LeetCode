@@ -29,7 +29,7 @@ public class _94 {
         List<Integer> result = new ArrayList<>();
         Stack<TreeNode> stack = new Stack<>();
         TreeNode node = root;
-        while (!stack.isEmpty() && node != null) {
+        while (!stack.isEmpty() || node != null) {
             while (node != null) {
                 stack.push(node);
                 node = node.left;
