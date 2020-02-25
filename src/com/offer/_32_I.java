@@ -27,8 +27,13 @@ public class _32_I {
                 TreeNode node = queue.remove();
                 if (node != null) {
                     list.add(node.val);
-                    queue.add(node.left);
-                    queue.add(node.right);
+                    // 优化-减少队列插入，循环次数
+                    if (node.left != null) {
+                        queue.add(node.left);
+                    }
+                    if (node.right != null) {
+                        queue.add(node.right);
+                    }
                 }
             }
         }
