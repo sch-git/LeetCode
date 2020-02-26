@@ -10,7 +10,7 @@ package com.offer;
  */
 public class _26 {
     public static void main(String[] args) {
-
+        //DFS 简化
     }
 
     public boolean isSubStructure(TreeNode A, TreeNode B) {
