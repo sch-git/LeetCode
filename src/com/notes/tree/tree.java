@@ -16,14 +16,14 @@ public class tree {
      * @param node 当前节点
      */
     public void traverse(TreeNode node) {
-        while (node != null) {
+        if (node != null) {
             traverse(node.left);
             traverse(node.right);
         }
     }
 
     public void traverseMul(TreeNodeMul root) {
-        while (root != null) {
+        if (root != null) {
             for (TreeNodeMul node : root.children) {
                 traverseMul(node);
             }
