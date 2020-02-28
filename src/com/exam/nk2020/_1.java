@@ -1,4 +1,4 @@
-package com.exam;
+package com.exam.nk2020;
 
 import java.util.Scanner;
 
