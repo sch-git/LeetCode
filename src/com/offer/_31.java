@@ -1,4 +1,4 @@
-package com.algorithm.medium;
+package com.offer;
 
 import java.util.Stack;
 

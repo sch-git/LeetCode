@@ -1,4 +1,4 @@
-package com.algorithm.medium;
+package com.offer;
 
 /**
  * @Solution: 位运算
