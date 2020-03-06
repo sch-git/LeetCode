@@ -1,48 +1,29 @@
 package com.offer;
 
 /**
- * @Description: TODO
+ * @Solution: 双指针
+ * @Title: 和为s的两个数字
+ * @Description: 输入一个递增排序的数组和一个数字s，在数组中查找两个数，使得它们的和正好是s。如果有多对数字的和等于s，则输出任意一对即可。
  * @Author: chenghao.su
- * @Date: 2020/3/5 10:58
+ * @Date: 2020/3/6 20:50
  */
 public class _57 {
     public static void main(String[] args) {
-        findContinuousSequence(87760);
+
     }
 
-    public static int[][] findContinuousSequence(int target) {
-        int left;
-        int right = target / 2 + 1;
-        int[][] result = new int[target][];
-        int index = 0;
-        for (int i = 1; i < target / 2 + 1; i++) {
-            left = i;
-            right = target / 2 + 1;
-            while (left < right) {
-                int sum = ((left + right) * (right - left + 1)) / 2;
-                if (sum < target) {
-                    left++;
-                }
-                if (sum > target) {
-                    right--;
-                }
-                if (sum == target) {
-                    result[index] = new int[right - left + 1];
-                    for (int k = 0; k <= right - left; k++) {
-                        result[index][k] = left + k;
-                    }
-                    index++;
-                    break;
-                }
+    public int[] twoSum(int[] nums, int target) {
+        int left = 0;
+        int right = nums.length - 1;
+        while (left < right) {
+            if (nums[left] + nums[right] < target) {
+                left++;
+            } else if (nums[left] + nums[right] > target) {
+                right--;
+            } else {
+                return new int[]{nums[left], nums[right]};
             }
         }
-        int[][] ans = new int[index][];
-        for (int i = 0; i < index; i++) {
-            ans[i] = new int[result[i].length];
-            for (int j = 0; j < result[i].length; j++) {
-                ans[i][j] = result[i][j];
-            }
-        }
-        return ans;
+        return null;
     }
 }
