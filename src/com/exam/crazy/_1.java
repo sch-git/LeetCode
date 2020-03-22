@@ -1,10 +1,12 @@
 package com.exam.crazy;
 
+import java.math.BigInteger;
 import java.util.Scanner;
 import java.util.Stack;
 
 /**
- * @Description: TODO
+ * @Solution: BigInteger大整数
+ * @Description:
  * @Author: chenghao.su
  * @Date: 2020/3/22 10:01
  */
@@ -26,11 +28,11 @@ public class _1 {
         if (buffer.length() > 0) {
             stack.push(Long.parseLong(buffer.toString()));
         }
-        long mul = 1;
+        // 将数据转为大整数防止溢出
+        BigInteger mul = BigInteger.valueOf(1L);
         while (!stack.isEmpty()) {
-            mul *= stack.pop();
-            mul = mul % Long.MAX_VALUE;
+            mul = mul.multiply(BigInteger.valueOf(stack.pop()));
         }
-        System.out.println(mul);
+        System.out.println(mul.toString());
     }
 }
